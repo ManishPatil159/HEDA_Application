@@ -1,0 +1,56 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item padding="around-small">
+            <ul class="slds-accordion">
+                <li class="slds-accordion__list-item">
+                    <section class="slds-accordion__section slds-is-open">
+                        <div class="slds-accordion__summary">
+                            <h3 class="slds-accordion__summary-heading">
+                                <lightning-button-icon icon-name="utility:switch" 
+                                    alternative-text="switch" size="small"></lightning-button-icon>
+                                <span class="slds-truncate" title="Accordion summary">Accordion summary</span>
+                            </h3>
+                        </div>
+                        <div class="slds-accordion__content" id="accordion-details-01">
+                            <ul class="slds-accordion">
+                                <li class="slds-accordion__list-item">
+                                    <section class="slds-accordion__section slds-is-open">
+                                        <div class="slds-accordion__summary">
+                                            <h3 class="slds-accordion__summary-heading">
+                                                <lightning-button-icon icon-name="utility:switch"
+                                                    alternative-text="switch" class="slds-m-left_x-small">
+                                                </lightning-button-icon>
+                                                <span class="slds-truncate" title="Nested accordion summary">Nested
+                                                    accordion summary</span>
+                                            </h3>
+                                        </div>
+                                        <div class="slds-accordion__content" id="accordion-details-04">Accordion details
+                                            - A
+                                        </div>
+                                    </section>
+                                </li>
+                                <li class="slds-accordion__list-item">
+                                    <section class="slds-accordion__section">
+                                        <div class="slds-accordion__summary">
+                                            <h3 class="slds-accordion__summary-heading">
+                                                <lightning-button-icon icon-name="utility:switch"
+                                                    alternative-text="switch">
+                                                </lightning-button-icon>
+                                                <span class="slds-truncate" title="Nested accordion summary">Nested
+                                                    accordion summary</span>
+                                            </h3>
+
+                                        </div>
+                                        <div hidden="" class="slds-accordion__content" id="accordion-details-05">
+                                            Accordion
+                                            details - B</div>
+                                    </section>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

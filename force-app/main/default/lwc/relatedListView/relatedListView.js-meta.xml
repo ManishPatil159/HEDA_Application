@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="relatedListView">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+    </targets>
+
+    <targetConfigs>   
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage">
+            <property name="objectApiName" type="String" label="Object API Name"/>
+            <property name="fieldNames" type="String" default="" label="Fields to be displayed"/>
+            <property name="parentFieldName" type="String" default="" label="Parent Field Name"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
