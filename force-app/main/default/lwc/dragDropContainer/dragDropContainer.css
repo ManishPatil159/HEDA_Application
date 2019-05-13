@@ -1,0 +1,9 @@
+ul li {
+    width: 100%;
+    padding: 2%;
+    background-color: beige;
+}
+
+ul li.blue-background-class {
+	background-color: #C8EBFB;
+}
