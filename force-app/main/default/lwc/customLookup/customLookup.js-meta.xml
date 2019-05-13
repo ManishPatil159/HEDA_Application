@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="CustomLookup">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+    </targets>
+
+    <targetConfigs>   
+        <targetConfig targets="lightning__RecordPage,lightning__AppPage">
+            <property name="objectApiName" type="String" label="Object API Name"/>
+            <property name="nameField" type="String" default="" label="Name Field"/>
+            <property name="whereClause" type="String" default="" label="Where condition"/>
+            <property name="objectIcon" type="String" default="" label="Object Icon"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
