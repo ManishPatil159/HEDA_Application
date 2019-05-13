@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "c/customLookup": [
+                "customLookup/customLookup.js"
+            ],
+            "c/dragDropContainer": [
+                "dragDropContainer/dragDropContainer.js"
+            ],
+            "c/pwaComponent": [
+                "pwaComponent/pwaComponent.js"
+            ],
+            "c/relatedListView": [
+                "relatedListView/relatedListView.js"
+            ]
+        },
+        "experimentalDecorators": true
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}
