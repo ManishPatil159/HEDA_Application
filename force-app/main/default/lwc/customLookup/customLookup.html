@@ -8,7 +8,7 @@
         {responseList}
     </p> -->
 
-    <div>
+    <div class='lookup-Parent'>
         <div class="slds-form-element">
             <div class="slds-form-element__control">
                 <div class="slds-combobox_container">
@@ -16,32 +16,34 @@
                         aria-expanded="false" aria-haspopup="listbox" role="combobox">
 
                         <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
-                            role="none" onkeyup={handleKeyUp}>
-                            <lightning-input id="txtSearch" value={queryTerm} name="enter-search" label="" type="search">
+                            role="none" >
+                            <lightning-input onchange={handleKeyUp} id="txtSearch" value={queryTerm} name="enter-search" label=""
+                                type="search">
                             </lightning-input>
                             <!-- <span
                                 class="lookup-search-icon slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
                                 <lightning-icon icon-name="standard:account" alternative-text="account" size="x-small"></lightning-icon>
                             </span>  -->
                         </div>
-                        <div id="listbox-id-1"
+                        <div id="cutstomlookup-list"
                             class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
                             <ul class="slds-listbox slds-listbox_vertical" role="presentation">
                                 <template for:each={responseList} for:item='responseItem'>
                                     <li key={responseItem.id} role="presentation" class="slds-listbox__item">
                                         <div id={responseItem.Id} data-item={responseItem.Id}
-                                            class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
+                                            class="custom-lookup-listitem slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta"
                                             role="option" onclick={itemSelected}>
-                                             <span class="slds-media__figure slds-listbox__option-icon">
-                                                        <span class="slds-icon_container slds-icon-standard-account">
-                                                                <!-- <lightning-icon icon-name="standard:account" alternative-text="account" size="x-small"></lightning-icon> -->
-                                                                <lightning-icon icon-name={objectIcon} alternative-text="account" size="x-small"></lightning-icon>
-                                                            <!-- <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                                            <span class="slds-media__figure slds-listbox__option-icon">
+                                                <span class="slds-icon_container slds-icon-standard-account">
+                                                    <!-- <lightning-icon icon-name="standard:account" alternative-text="account" size="x-small"></lightning-icon> -->
+                                                    <lightning-icon icon-name={objectIcon} alternative-text="account"
+                                                        size="x-small"></lightning-icon>
+                                                    <!-- <svg class="slds-icon slds-icon_small" aria-hidden="true">
                                                                 <use xmlns:xlink="http://www.w3.org/1999/xlink"
                                                                     xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account" />
                                                             </svg> -->
-                                                        </span>
-                                                    </span> 
+                                                </span>
+                                            </span>
                                             <span class="slds-media__body">
                                                 <span id={responseItem.id} data-name={responseItem.Id}
                                                     class="slds-listbox__option-text slds-listbox__option-text_entity">{responseItem.Name}</span>
