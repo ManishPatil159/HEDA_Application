@@ -11,15 +11,16 @@ public with sharing class CustomLookupController {
      */
     @AuraEnabled(cacheable=true)
     public static List<SObject> getSearchResults(String searchQuery, String objectName, String nameField, String whereClause) {
-        System.debug('searchQuery:::: '+searchQuery);
-        String searchStr = searchQuery+'%';
-        String query='SELECT '+ nameField +' FROM ' + objectName + ' WHERE Name LIKE \''+ searchStr+'\'';
+        if(!String.isEmpty(searchQuery)) {
+            String searchStr = searchQuery+'%';
+            String query='SELECT '+ nameField +' FROM ' + objectName + ' WHERE Name LIKE \''+ searchStr+'\'';
 
-        if(whereClause!=null && whereClause != '') {
-            query+=' AND ' + whereClause;
+            if(whereClause!=null && whereClause != '') {
+                query+=' AND ' + whereClause;
+            }
+            return Database.query(query);
+        } else {
+            return new List<SObject>();
         }
-        System.debug('query:::: '+query);
-        System.debug('query after escape:::: '+query);
-        return Database.query(query);
     }
 }
