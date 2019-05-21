@@ -8,8 +8,14 @@
             "c/dragDropContainer": [
                 "dragDropContainer/dragDropContainer.js"
             ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
             "c/pwaComponent": [
                 "pwaComponent/pwaComponent.js"
+            ],
+            "c/relatedListItem": [
+                "relatedListItem/relatedListItem.js"
             ],
             "c/relatedListView": [
                 "relatedListView/relatedListView.js"

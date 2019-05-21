@@ -1,3 +1,11 @@
-.slds-button_icon-border {
+.slds-accordion__summary-heading .slds-button_icon-border {
     border: none !important;
+}
+
+c-related-list-item {
+    width: 100%
+}
+
+.slds-accordion__section li {
+    margin-right: 2%;
 }

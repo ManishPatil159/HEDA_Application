@@ -7,6 +7,7 @@ public with sharing class RelatedListDisplayController {
     public static List<SObject> getRelatedList(Id parentId, String fieldNames, String parentField, String objAPIName) {
         //String query = 'SELECT ' + parentField + ' FROM ' + objAPIName + ' WHERE ' + parentField + '=' + parentId;
         String query ='SELECT  ' + fieldNames + ' FROM ' + objAPIName + ' WHERE ' + parentField + ' = \'' + parentId + '\'';
+        System.debug('query:: ' + query);
         return Database.query(query);
     }
 }

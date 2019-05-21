@@ -10,7 +10,7 @@
     <targetConfigs>   
         <targetConfig targets="lightning__RecordPage,lightning__AppPage">
             <property name="objectApiName" type="String" label="Object API Name"/>
-            <property name="fieldNames" type="String" default="" label="Fields to be displayed"/>
+            <property name="fieldNames" type="String" default="Id" label="Fields to be displayed (comma separated)"/>
             <property name="parentFieldName" type="String" default="" label="Parent Field Name"/>
         </targetConfig>
     </targetConfigs>
